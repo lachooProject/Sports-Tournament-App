@@ -1,0 +1,194 @@
+.cricket-score-container {
+  background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+  min-height: 100vh;
+  padding: 20px 0;
+}
+
+.main-score-card {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+.score-header {
+  background: #1a2a6c;
+  padding: 20px;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.score-content {
+  padding: 30px;
+}
+
+.match-teams {
+  color: #1a2a6c;
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin: 20px 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.score-display {
+  background: linear-gradient(45deg, #f8f9fa, #e9ecef);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: inset 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.score-display h1 {
+  font-size: 4.5rem;
+  font-weight: 800;
+  color: #1a2a6c;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.score-display h4 {
+  color: #778899;
+  margin-top: 10px;
+}
+
+.current-over-display {
+  background: linear-gradient(45deg, #f8f9fa, #e9ecef);
+  padding: 20px;
+  border-radius: 15px;
+  margin: 30px 0;
+  box-shadow: inset 0 0 10px rgba(176, 196, 222, 0.2);
+}
+
+.balls-display {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+.score-controls {
+  background: #f8f9fa;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.score-btn {
+  padding: 15px;
+  font-weight: 600;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.score-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.match-status .badge {
+  font-size: 1rem;
+  background-color: #4682b4 !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .score-display h1 {
+    font-size: 3.5rem;
+  }
+  
+  .score-controls {
+    padding: 0 15px;
+  }
+  
+  .balls-display {
+    flex-wrap: wrap;
+  }
+  
+  .match-teams {
+    font-size: 1.8rem;
+  }
+  
+  .score-btn {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Custom button colors */
+.btn-outline-primary {
+  color: #4682b4;
+  border-color: #4682b4;
+}
+
+.btn-outline-primary:hover {
+  background-color: #4682b4;
+  color: white;
+}
+
+.balls-display .badge {
+  font-size: 1.1rem;
+  min-width: 45px;
+  padding: 12px;
+  margin: 5px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.balls-display .badge:hover {
+  transform: scale(1.1);
+}
+
+.player-stats {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 30px 0;
+}
+
+.batting-info, .bowling-info {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.batting-info:hover, .bowling-info:hover {
+  transform: translateY(-5px);
+}
+
+.batting-info {
+  background-color: #e3f2fd;
+}
+
+.bowling-info {
+  background-color: #e8eaf6;
+}
+
+.toss-info {
+  margin-bottom: 20px;
+}
+
+.toss-info .badge {
+  font-size: 1rem;
+  padding: 10px 20px;
+  background: linear-gradient(45deg, #1a2a6c, #2a3a7c);
+  border: none;
+  box-shadow: 0 4px 15px rgba(26, 42, 108, 0.2);
+}
+
+/* Custom animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.score-content > * {
+  animation: fadeIn 0.5s ease-out forwards;
+}

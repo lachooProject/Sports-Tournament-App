@@ -1,0 +1,93 @@
+.football-score-container {
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  min-height: 100vh;
+  padding: 20px 0;
+}
+
+.main-score-card {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.score-header {
+  background: #1e3c72;
+  color: white;
+  padding: 20px;
+  border-radius: 20px 20px 0 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.teams-score-display {
+  background: linear-gradient(45deg, #f8f9fa, #e9ecef);
+  padding: 30px;
+  border-radius: 15px;
+  margin: 20px 0;
+}
+
+.score {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #1e3c72;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.stat-row {
+  padding: 10px;
+  margin: 5px 0;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+.recent-events {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 15px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.event-item {
+  padding: 10px;
+  margin: 5px 0;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  animation: slideIn 0.3s ease-out;
+}
+
+.score-controls button {
+  margin: 5px 0;
+  padding: 10px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.score-controls button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .score {
+    font-size: 2.5rem;
+  }
+  
+  .teams-score-display h3 {
+    font-size: 1.2rem;
+  }
+}
