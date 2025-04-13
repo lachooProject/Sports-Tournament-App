@@ -1,5 +1,5 @@
 const config = {
-    baseUrl: 'http://localhost:2000/api/v2',
+    baseUrl: 'https://sports-tournament-api.onrender.com/api/v2',
 };
 
 export default config;
