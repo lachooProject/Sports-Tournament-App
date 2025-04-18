@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 import Loading from "../components/Ui/LoadingSpinner";
 import { showToast } from "../components/Ui/Toastify";
 import { useNavigate, Link } from "react-router-dom";
-
+import config from "../../config";
 
 const StatTable = ({ title, playersStats, teamId }) => {
   // Filter players for the current team
@@ -66,7 +66,7 @@ const BadmintonScore = () => {
   const fetchMatchDetails = async () => {
     try {
       const response = await fetch(
-        `http://localhost:2000/api/v2/main/allmatch/${matchId}/badminton`
+        `${config.baseUrl}/main/allmatch/${matchId}/badminton`
       );
       const data = await response.json();
 
