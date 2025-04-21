@@ -15,6 +15,12 @@ const StatTable = ({ title, playersStats, type, teamId }) => {
     (playerStat) => playerStat.player.teamId === teamId
   );
 
+  // For bowling, show only players who bowled
+  const filteredPlayers =
+    type === "bowling"
+      ? teamPlayers.filter((player) => player.stats.overs > 0) // Only players who bowled
+      : teamPlayers; // Show all players for batting
+
   return (
     <div className="bg-darkbc rounded-lg sm:p-4 p-2">
       <h3 className="text-lg font-semibold text-white mb-3">{title}</h3>
@@ -32,7 +38,7 @@ const StatTable = ({ title, playersStats, type, teamId }) => {
               </tr>
             </thead>
             <tbody>
-              {teamPlayers.map((player) => (
+              {filteredPlayers.map((player) => (
                 <tr
                   key={player.player._id}
                   className={`${
@@ -68,7 +74,7 @@ const StatTable = ({ title, playersStats, type, teamId }) => {
               </tr>
             </thead>
             <tbody>
-              {teamPlayers.map((player) => (
+              {filteredPlayers.map((player) => (
                 <tr
                   key={player.player._id}
                   className="border-b border-gray-600"
