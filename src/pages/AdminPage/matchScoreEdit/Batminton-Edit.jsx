@@ -32,8 +32,6 @@ const BadmintonEdit = () => {
       if (response.ok) {
         setMatchDetails(data.data.match);
         setPlayerStats(data.data.match.playersStats || []);
-        console.log(data.data.match);
-        console.log(data.data.match.playersStats);
       } else {
         throw new Error(data.message);
       }
