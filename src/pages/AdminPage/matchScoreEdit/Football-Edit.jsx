@@ -36,7 +36,6 @@ const FootballEdit = () => {
       const data = await response.json();
       if (response.ok) {
         setMatchDetails(data.data.match);
-        console.log(data.data.match);
         setPlayerStats(data.data.match.playersStats || []);
       } else {
         throw new Error(data.message);
