@@ -142,11 +142,9 @@ function TeamPage() {
         setTeams([...teams, data.team]);
       } else {
         showToast(data.message || "Failed to create team", "error");
-        console.log(data.message);
       }
     } catch (error) {
       showToast("Failed to create team", "error");
-      console.error("Error adding team:", error);
     } finally {
       setLoading(false);
     }
