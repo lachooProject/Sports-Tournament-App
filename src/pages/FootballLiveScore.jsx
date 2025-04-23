@@ -23,8 +23,6 @@ const FootballLiveScore = () => {
   });
 
   useEffect(() => {
-    console.log('FootballLiveScore component mounted');
-    console.log('Match ID:', matchId);
   }, []);
 
   const handleScoreUpdate = (team, type) => {
