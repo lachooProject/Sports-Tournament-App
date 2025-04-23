@@ -49,9 +49,7 @@ export default function Signup() {
     setError("");
 
     // Debug OTP values
-    console.log("Entered OTP:", otp);
-    console.log("Stored OTP:", sentOtp);
-    console.log("Types:", {
+    {
       enteredType: typeof otp,
       storedType: typeof sentOtp,
     });
