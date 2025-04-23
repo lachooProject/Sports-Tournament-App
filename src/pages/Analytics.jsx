@@ -91,7 +91,6 @@ function Analytics() {
         const data = await response.json();
         setPlayers(data.data || []); // Assuming the API returns data in { data: [...players] } format
       } catch (error) {
-        console.error("Error fetching players:", error);
         setError("Failed to load players. Please try again.");
       } finally {
         setLoading(false);
@@ -127,7 +126,6 @@ function Analytics() {
 
       setComparisonData(data.data);
     } catch (error) {
-      console.error("Error fetching comparison:", error);
       setError(`Failed to load comparison data: ${error.message}`);
       setComparisonData(null);
     } finally {
@@ -635,7 +633,7 @@ function Analytics() {
           throw new Error(`Unsupported sport: ${selectedSport}`);
       }
     } catch (error) {
-      console.error("Error rendering comparison stats:", error);
+      // console.error("Error rendering comparison stats:", error);
       return (
         <div className="mt-8 p-4 bg-red-900/50 rounded-lg">
           <p className="text-red-200">
