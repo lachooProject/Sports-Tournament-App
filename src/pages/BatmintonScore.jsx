@@ -11,7 +11,6 @@ const StatTable = ({ title, playersStats, teamId }) => {
   const teamPlayers = playersStats.filter(
     (playerStat) => playerStat.player.teamId === teamId
   );
-  console.log(playersStats[0].player._id);
 
   return (
     <div className="bg-darkbc rounded-lg sm:p-4 p-2">
