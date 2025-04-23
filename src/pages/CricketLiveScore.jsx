@@ -26,9 +26,6 @@ const CricketLiveScore = () => {
 
   // Log component rendering for debugging
   useEffect(() => {
-    console.log("CricketLiveScore component mounted");
-    console.log("Match ID:", matchId);
-    console.log("Current match data:", matchData);
   }, []);
 
   const handleScoreUpdate = (type) => {
