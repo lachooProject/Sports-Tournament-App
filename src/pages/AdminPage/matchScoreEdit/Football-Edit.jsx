@@ -75,10 +75,6 @@ const FootballEdit = () => {
         }
       );
 
-      console.log("data" + selectedPlayer);
-      console.log("data" + selectedAction);
-      console.log("data" + matchId);
-
       const data = await response.json();
       if (response.ok) {
         showToast("success", "Action recorded successfully");
