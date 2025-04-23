@@ -49,10 +49,8 @@ export default function Signup() {
     setError("");
 
     // Debug OTP values
-    {
       enteredType: typeof otp,
-      storedType: typeof sentOtp,
-    });
+      storedType: typeof sentOtp;
 
     try {
       let otpcheck = Number(otp);
