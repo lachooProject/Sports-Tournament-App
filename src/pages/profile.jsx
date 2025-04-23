@@ -357,7 +357,6 @@ const PlayerProfile = () => {
   const [player, setPlayer] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  console.log(playerid);
   const navigate = useNavigate();
 
   const handleTeamClick = (teamName) => {
