@@ -149,7 +149,6 @@ const Status = () => {
         setError(
           error.response?.data?.message || "Failed to fetch match details"
         );
-        console.error("API Error:", error);
         showToast("error", "Failed to load match details");
       } finally {
         setLoading(false);
@@ -215,7 +214,6 @@ const Status = () => {
         throw new Error(data.message || "Failed to update status");
       }
     } catch (error) {
-      console.error("API Error:", error);
       showToast("error", error.message || "Failed to update status");
     } finally {
       setUpdatingStatus(false);
