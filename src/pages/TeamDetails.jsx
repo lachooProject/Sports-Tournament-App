@@ -54,7 +54,6 @@ const TeamDetails = () => {
 
       if (response.ok) {
         setTeam(data.data.team);
-        console.log(data.data.team);
       } else {
         throw new Error(data.message);
       }
