@@ -29,7 +29,7 @@ export default function Signup() {
       });
 
       const data = await response.json();
-      console.log(data);
+     
 
       if (!response.ok) throw new Error(data?.message || "Login failed");
 
@@ -81,7 +81,6 @@ export default function Signup() {
         setError(`OTP does not match`);
       }
     } catch (err) {
-      console.error("Verification error:", err);
       toast.error(err.message);
       setError(err.message);
     } finally {
