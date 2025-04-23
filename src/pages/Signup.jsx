@@ -48,10 +48,6 @@ export default function Signup() {
     setIsSubmitting(true); // Add additional submitting state
     setError("");
 
-    // Debug OTP values
-      enteredType: typeof otp,
-      storedType: typeof sentOtp;
-
     try {
       let otpcheck = Number(otp);
       if (otpcheck === sentOtp) {
