@@ -20,8 +20,6 @@ const BadmintonLiveScore = () => {
   });
 
   useEffect(() => {
-    console.log('BadmintonLiveScore component mounted');
-    console.log('Match ID:', matchId);
   }, [matchId]);
 
   const handleScoreUpdate = (player) => {
