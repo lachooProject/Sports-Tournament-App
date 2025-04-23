@@ -62,8 +62,6 @@ function Matches() {
   };
 
   const handleMatchClick = (match, sport) => {
-    console.log(match.status);
-    console.log(match);
     if (match.status === "upcoming") return null;
 
     switch (sport.toLowerCase()) {
