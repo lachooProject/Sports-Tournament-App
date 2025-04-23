@@ -458,6 +458,13 @@ const CricketEdit = () => {
                 </div>
               ) : (
                 <>
+                   <button
+                    onClick={() => handleScoreUpdate(0)}
+                    className="p-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-bold transition-colors"
+                    disabled={updatingScore}
+                  >
+                    0 Run
+                  </button>
                   <button
                     onClick={() => handleScoreUpdate(1)}
                     className="p-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-bold transition-colors"
