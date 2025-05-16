@@ -674,7 +674,7 @@ function Analytics() {
     return (
       <div className="mt-8">
         {/* Player Basic Info Cards */}
-        <div className="grid grid-cols-2 gap-8 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
           {[comparisonData.player1, comparisonData.player2].map(
             (player, idx) => (
               <div key={idx} className="bg-midnight rounded-lg p-6">
@@ -1027,7 +1027,7 @@ function Analytics() {
               renderComparisonStats()}
 
             {/* Comparison Stats */}
-            {selectedPlayer1 && selectedPlayer2 && renderComparisonStats()}
+            {/* {selectedPlayer1 && selectedPlayer2 && renderComparisonStats()} */}
 
             {/* Error Message */}
             {error && <div className="text-red-500 mt-4">{error}</div>}
