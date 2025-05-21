@@ -244,7 +244,7 @@ const Landing = () => {
           </div>
         </div>
 
-        <section className="py-20">
+{/*         <section className="py-20">
           <div className="container mx-auto px-4">
             <h2 className="text-4xl font-bold text-center mb-12 text-light">
               THE PROCESS
@@ -274,7 +274,7 @@ const Landing = () => {
               </div>
             ))}
           </div>
-        </section>
+        </section> */}
 
         <div className="relative min-h-[700px] h-Screen">
           <img
